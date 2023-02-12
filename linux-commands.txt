@@ -1,0 +1,92 @@
+Linux is case-sensitive
+
+Fundamentals of file manipulation
+---------------------------------
+
+ls //list the contents of a directory.
+ls -l // each file will be listed on a separate line in long format
+    ls * // '*' matches any number of characters. 
+    ls *ing
+    ls sp??t // '?' matches exactly one character.
+
+-rw-r--r-- 1 natat 197609  88832 Feb 11 16:52 6kn.gif
+  -----  -----  -----
+- r w x  r w x  r w x
+d owner  group  other
+The 'r' means you can "read" the file's contents.
+The 'w' means you can "write", or modify, the file's contents.
+The 'x' means you can "execute" the file. 
+
+more cobras //
+
+mkdir New_Dir_Name // create new directory
+
+mv file_name to_place // moving file from one place to other
+mv old_file_name new_file_name // renaming file
+
+cd uri // change directory
+cd .. // move to parent directory
+cd ~ // go to your home directory
+cd // go to your home directory, by default
+
+"." // current directory 
+
+pwd // print working directory
+
+cp from_where to_where // copy from - to
+
+rm reptiles/cobras // remove file
+rmdir reptiles // remove empty directory
+rm -r stocks // remove a directory called "stocks" and all of its subdirectories and files
+
+chmod // change mode, The first argument is 'u', 'g', 'o'
+  chmod ugo-rwx gorillas
+  chmod u+x gorillas
+
+groups //shows groups you are in
+
+cp ~/jokes /tmp // copy file jokes from home ditectory to /tmp
+    '~' home user directory
+    '~UserID' User ID's home directory
+cp -r ~jester/jokes ~ // coppy with "-r" directory to your home directory
+
+man ls // displays the manual pages describing the "ls" command.
+     "man -k" searches the NAME section of all manual pages to find what you are looking for. 
+
+finger Greg // displays information about the system user
+
+find //find files
+    find ~ -name "poem*"
+
+cat jabber wocky // "concatenate" two files, 
+    cat jabber // many people use "cat", rather than "more", to display the contents of a file.
+
+> >> // To send the output from a command such as "cat" to a file, you can use either '>'(overwrite) or '>>'(add to the end).
+    cat jabber wocky > poem 
+
+lpr // send to printer, "line printer"
+lpq // display print queue
+lprm // remove from print queue,  "line printer remove".
+     lpr -P hp14 thoughts // send your file to a printer called "hp14" rather than the default one
+     lpq -P hp14 //status of all print jobs in the "hp14" queue
+     lprm -P hp14 148
+
+df // how much free space left on disk, "disk free"
+    df ~
+    df .
+
+ps aux // get a detailed list of all processes
+
+| // "pipes" data from one command to another, sends the output of a command as the input to another command.
+     cat joke-1 joke-2 | lpr -P zephyr // The output of "cat joke-1 joke-2" is sent directly to the printer
+
+grep //  use "grep" to find patterns in data. 
+    grep gold metals //find every occurrence of the word "gold" in file "metals"
+    grep rabbit joke*
+    cat joke-1 joke-2 | grep rabbit //  list only those lines containing the word rabbit in Jester's joke files
+    ps aux | grep rogue
+
+kill PID // kill process,  PID is the ID of the process you want to kill.
+kill -9 PID // kill immediately
+
+
