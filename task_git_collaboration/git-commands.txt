@@ -1,3 +1,6 @@
+https://www.coursera.org/learn/introduction-git-github
+https://learngitbranching.js.org/?locale=uk
+
 git init
 git status
 

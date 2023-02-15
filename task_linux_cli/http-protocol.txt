@@ -1,0 +1,195 @@
+https://code.tutsplus.com/uk/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177
+https://code.tutsplus.com/uk/tutorials/http-the-protocol-every-web-developer-must-know-part-2--net-31155
+
+
+HTTP (Hypertext Transfer Protocol) - stateless, application-layer protocol for communicating between distributed systems
+
+HTTP > TCP > IP  :80
+ 
+HTTPS > SSL/TSL > TCP > IP  :443
+
+TCP (Transmission Control Protocol )
+SSL/TSL (Transport Layer Security or Secure Sockets Layer, respectively)
+
+
+Browser(client)  raise a request for content. The request is sent to a server, which in return sends a response back to the browser. 
+Every request raised by the browser is independent. Request carry all the information needed to fulfill it, information is passed through headers. 
+
+The requests are sent, and responses are received over the TCP/IP layer. The default port for HTTP communication is port 80, but this can be configured differently for different applications.
+
+	HTTP/2.0. allows the client to send multiple requests simultaneously (multiplexing). It cuts down on the time required to load a page.
+
+	HTTP/1.1 allows only a single outstanding request with every TCP/IP connection(baseline). 
+
+	HTTP/0.9 is deprecated. 
+
+
+
+HTTP Requests
+
+- request line: what is being requested. It consists of a verb, a path, and the HTTP version.
+
+	HTTP Request Verbs
+
+	- GET: fetch a resource from the server. It does not have a message body.
+	- POST: create a new resource. 
+	- PUT: update an existing resource.
+	- DELETE: delete an existing resource.
+	- HEAD is similar to GET, but without the message body. It's used to check if the resource has changed, via timestamps.
+	- TRACE is used to retrieve the hops that a request takes during a round trip from the server. 
+	- OPTIONS is used to retrieve server capabilities. 
+
+- headers: additional information about the message, the requester, and the communication format.
+
+	- both the request and response messages:
+
+	Cache-Control: how caching happens in CDNs, proxies, or browsers. 
+	Connection: keep-alive or closed.
+	Pragma for backwards compatibility with HTTP/1.0, which does not support Cache-Control.
+	Trailer: tells the server it can append metadata to the message body
+	Transfer-encoding: defines the encoding of the payload transferred from the server. hop-by-hop header.
+	Via is used to track messages and the capabilities of the client or server.
+	Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11.
+
+	- specific to the request:
+
+	Accept- prefixed headers indicate the acceptable media-types, encoding, languages, and character sets on the client.
+	From, Host, Referer, and User-Agent have details about the client that initiated the request.
+	Authorization: used by the client to provide credentials which can be further used by the server to authenticate the request.
+	If- prefixed headers are used to make a request conditional—the server returns the resource only if the condition matches. Otherwise, it returns a 304 Not Modified. 
+	Referrer: contains either the partial or absolute address of the requesting page.
+	
+
+- body (optional): the content of the request. For a simple request for a static resource like a web page, this will be empty. For a form submission, this will contain the information from the form. The body is separated from the headers by a blank line.
+
+
+HTTP Responses
+
+	status line: includes a status code that indicates whether the request succeeded (status code 200) or why the request failed.
+		Status codes
+
+		1xx: Informational Messages
+		2xx: Successful
+		3xx: Redirection
+		4xx: Client Error
+		5xx: Server Error
+
+	headers: additional information about the response		
+		Age: the time in seconds since the message was generated on the server.
+		ETag: the MD5 hash of the entity, used to check for modifications.
+		Location: used when sending a redirection and contains the new URL.
+		Server: identifies the server generating the message.
+		Entity headers: 
+			Allow: defines the set of methods a resource may support. If not supported, you will receive 405 Method Not Allowed.
+			Content- prefixed headers indicate the response media-types, encoding, languages, and character sets on the message payload. For instance, Content-Encoding is used to compress the transmitted data. 
+			Expires: indicates the date and time when the response will become invalid, so the resource should not be cached past that point.
+			Last-Modified: carries details of when the server believes that the response resource was last modified. 
+
+	body (optional): the content of the response. web page or the binary data of an image.
+
+
+For the command line, we have utilities like curl, tcpdump and tshark. These help in monitoring HTTP traffic.
+
+
+GET Requests With Fetch
+		let response = await fetch('https://example.com/movies.json')
+		let data = await response.json();
+		console.log(data);
+
+POST Requests With Fetch
+		let response = await fetch('https://example.com/profile', {
+		  method: 'POST', 
+		  headers: {
+		    'Content-Type': 'application/json',
+		  },
+		  body: JSON.stringify(data),
+		})
+		if (! response.ok) {
+		    console.log(`POST failed with status ${response.status}`)
+		}
+
+HTTP Connections
+
+- resolve IP address from host name via DNS
+- establish a connection with the server
+- send a request
+- wait for a response
+- close connection
+
+Establishing a connection between two endpoints is a multi-step process and involves the following:
+
+Persistent connection. 
+
+	The persistent connection will remain open until the server or client decides to close the connection. HTTP/1.1 keeps TCP connections open, even after a transaction is complete.
+
+Parallel Connections
+
+	If there are six assets that the client needs to download from a website, the client makes six parallel connections to download those assets, resulting in a faster turnaround. 
+
+
+HTTP Authentication
+
+	Basic Authentication
+		In Basic Authentication, the server initially denies the client's request with a WWW-Authenticate response header and a 401 Unauthorized status code. On seeing this header, the browser displays a login dialog, prompting for a username and password. This information is sent in a base-64 encoded format in the Authentication request header. 
+		 - Tackling the 401 Unauthorised Response //
+					HTTP/1.1 401 Unauthorized
+					Date: Sun, 24 Apr 2022 07:28:00 GMT
+					WWW-Authenticate: Basic realm="Access to production site"
+		 - Authorisation Header // Authorization: Basic <token>
+		 - Authentication Using Cookies // 
+		 			Set-Cookie response header - Set-Cookie: session-id=12345ABC; username=nettuts
+		 			The request header -  Cookie: name=value [; name2=value2]
+	Digest Authentication
+		From Client: Digest Authentication does not transfer a password to the server. Instead, the client takes the password and the username. Then, it applies an MD5 Hashing Algorithm to build a hash using the username and password. This hash is sent to the server.
+
+		At Server: The algorithm used to build the hash is used by the server to decode the password and username. The server searches for this combination in the database. If a valid record is found, access is granted. Else, a 401 or 403 error response is returned. 
+
+HTTP Caching
+	- Public Cache: stores the server response for multiple users. Deployed as caching proxies between the server and client.
+	- Private Cache: limited to a single user. The resource would be stored in the user's browser.
+
+	To keep the cached copy consistent with the server, HTTP provides some simple mechanisms, namely Document Expiration and Server Revalidation.
+
+	Document Expiration
+		HTTP allows an origin-server to attach an expiration date to each document using the Cache-Control and Expires response headers. 
+
+		- Expires : is an older HTTP/1.0 response header that specifies the value as an absolute date. 
+		- Cache-Control: max-age=<s> header introduced in HTTP/1.1. Here, max-age is a relative age, specified in seconds, from the time the response was created. Cache-Control: max-age=86400.// = 1 day
+
+			Server response
+			-Cache-Control: no-cache: the client is allowed to store the document; however, it must revalidate with the server on every request. = HTTP/1.0 Pragma: no-cache
+			- Cache-Control: no-store: this is a stronger directive to the client to not store the document at all.
+			- Cache-Control: must-revalidate: this tells the client to bypass its freshness calculation and always revalidate with the server. It is not allowed to serve the cached response in case the server is unavailable.
+			- Cache-Control: max-age: this sets a relative expiration time (in seconds) from the time the response is generated.
+
+			Condtraining freshness from the client
+			- Cache-Control: min-fresh=<s>: the document must be fresh for at least <s> seconds.
+			- Cache-Control: max-stale or Cache-Control: max-stale=<s>: the document cannot be served from the cache if it has been stale for longer than <s> seconds.
+			- Cache-Control: max-age=<s>: the cache cannot return a document that has been cached longer than <s> seconds.
+			- Cache-Control: no-cache or Pragma: no-cache: the client will not accept a cached resource unless it has been revalidated.
+
+	Server Revalidation
+		Once a cached document expires, the cache must revalidate with the server to check if the document has changed. 
+		
+
+
+Secure HTTP
+	
+HTTPS > SSL/TSL > TCP > IP  :443
+
+TCP (Transmission Control Protocol )
+SSL/TSL (Transport Layer Security or Secure Sockets Layer, respectively)
+
+	SSL uses a powerful form of encryption using RSA and public-key cryptography.
+
+	HTTPS uses the Secure Sockets Layer (SSL) or Transport Layer Security (TLS) to encrypt the entire communication between the client and the server. This makes sure that the client is connected only to the right server. Also, it verifies that the data is transferred only to the intended server. 
+
+	To make the web application work over HTTPS, you need to have a working digital certificate deployed on the server.
+
+	The most common form of certificate is the X.509 v3 standard, which contains information such as:
+
+		- the certificate issuer
+		- the algorithm used for the certificate
+		- the subject name or organisation for whom this cert is created
+		- the public key information for the subject
+		- the Certification Authority Signature, using the specified signing algorithm

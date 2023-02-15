@@ -1,3 +1,5 @@
+https://linuxsurvival.com/linux-tutorial-introduction/
+
 Linux is case-sensitive
 
 Fundamentals of file manipulation
@@ -89,4 +91,4 @@ grep //  use "grep" to find patterns in data.
 kill PID // kill process,  PID is the ID of the process you want to kill.
 kill -9 PID // kill immediately
 
-
+curl, tcpdump and tshark // These help in monitoring HTTP traffic.
