@@ -1,8 +1,18 @@
 https://www.coursera.org/learn/introduction-git-github
 https://learngitbranching.js.org/?locale=uk
 
-git init
-git status
+https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges
+
+VCS (Version Control System)
+commitId = Hash (algoritm SHA1) 40character string, keeps data consistent
+
+git init //empty git repository in current directory
+git status //info about working tree and pending changes
+
+git config --global user.email "email@mail.com"
+git config user.name "myname"
+
+git config --global credential.helper cache
 
 git config --list
 git config --list --show-origin
@@ -10,15 +20,62 @@ git config user.name
 
 git add index.html
 git add .
+git add -p // which changes will be staged, review patches
 
-git commit -m "commit comment"
-git commit -a -m "comment"
-git config --list
+git commit -m "commit comment" //short message
+git commit -a -m "comment" // -a skip staging area
+git commit --amend // owerwrites previous LOCAL commit, add changes to files and comment without new commit, changes commitID
+
+git log -p // produces patch text
+git log -2
+git log -p -2 // -p lets see the patch created by the commit, -2 limits the output to two last entries
+git log --stat // how many lines added or remowed
+git log --graph --oneline // summarized view of the commit history for a repo
+git show commitID // shows various objects
+git log origin/master
+
+git diff // difference in various commits
+git diff --staged // show all staged files compared to the named commit
+
+
+git rm file //delete unneeded file
+git mv old_file new_file //rename file
+
+echo .DS_Store > .gitignore // add file to .gitignore
+
+
+git branch // list of branches
+git branch branchName //create new branch
+git checkout -b branchName // crate new branch and checkout to it
+git branch -d branchName // delete branch
+git branch -r // look at remote branches that Git repo is currently tracking
+	origin/HEAD -> origin/main
+	origin/main
+
+git merge branchName // combines current branch and brunchName in new commit
+git merge --abort // stop merge and reset files
+
+git clone url // get local copy of remote repo
+git push 
+git push -f // forced an update
+git pull = git fetch + git merge // of curretn branch
+git fetch // downloads cpecific objects
+
+git remote // list remote repos
+git remote -v // look for the configuration for remote repo in directory with repo
+	origin  https://github.com/natata-tutorial/kottans-frontend.git (fetch)
+	origin  https://github.com/natata-tutorial/kottans-frontend.git (push)
+git remote show origin // show info about repo
+git remote update // fetchs the most up to date objects
+
 
 git remote add origin URL
-git push origin HEAD
+git push origin HEAD 
 
 Перемещение по дереву коммитов
+
+git checkout branchName //switcha to a branch
+git checkout filename //discarding changes in working directory
 git checkout main^ //Перемещение на один коммит назад ^, main^ означает "первый родитель ветки main"
 	git checkout main^2 - второй родитель мерджевого коммита
 
@@ -36,6 +93,7 @@ git clean -f             #untracked
 git restore .            #modified
 git restore --staged .   #staged
 git reset                #staged
+git reset HEAD fileName // unstage file
 git reset HEAD~          #commited
 
 git reset //отменяет изменения, перенося ссылку на ветку назад, на более старый коммит. Это своего рода "переписывание истории"; git reset перенесёт ветку назад, как будто некоторых коммитов вовсе и не было. На локальных ветках!!!
@@ -103,6 +161,8 @@ git merge o/main
 	git checkout -b foo original/main 
 	git pull
 
+
+
 git branch -u o/main foo // Другой способ указать ветке отслеживать удалённую ветку — это просто использовать команду git branch -u.
 вы укажете ветке foo следить за o/main. А если вы ещё при этом находитесь на ветке foo, то её можно не указывать:
 
@@ -151,3 +211,88 @@ git remote show origin
 
 git branch -r // read only branches
 git config --global credential-helper cache
+
+
+pull-merge-push workflow	
+	git add -p
+	git commit -m "message"
+	git push // rejected
+	git pull // conflict
+	git log --graph --oneline --all // three-way merge
+	git log -p origin/master // resolve conflict, save and close
+	git add file
+	git commit 
+	git push // success
+	git log --graph --oneline
+
+pushing remote branches
+	git checkout -b refactor
+	//file edits
+	git commit -a -m "changes in branch"
+	git push -u origin refactor // push as separate branch to let others check how changes work
+
+rebasing changes (feature branch)
+	git checkout master
+	git pull // came college changes
+	git log --graph --oneline --all // don't whant three-way merge, whant linear history
+	git checkout refactor
+	git rebase master //success
+	git log --graph --oneline // linear history
+	git checkot master
+	git git merge refactor // fast-forward merge
+	git push --delete origin refactor // get rid of remote branch
+	git branch -d refactor // get rid of local branch
+	git push
+
+rebase 2 (changes on master)
+	git commit -a -m "msg"
+	git fetch // get college changes
+	git rebase origin/master // conflict
+	//fix conflict
+	git add file
+	git rebase --continue
+	git log --graph --oneline
+	git push
+
+Best Practices for Collaborating
+
+- synchronize branches before start any work, pull before doing any work
+- avoid having very large changes
+- use separate feature branch
+- merge master to feature branch to reduce the difference
+- latest version of the project in master branch, stable version on a separate branch
+- don't rebase changes that were pushed to remote repos
+- good commit messages
+
+Pull Request Workflow
+	- create a fork in GitHub
+	- git clone forkURL
+		cd forkname
+		git checkout -b newBranchName
+		create file
+		git add Readme.md
+		git commit -m "Add readme"
+		gi push -u origin add-readme
+
+Squashing changes
+	we have two commits
+
+	git rebase -i main
+	in VSCode change pick to squash
+	save and close
+	Select and edit message, save and close
+	git show // two chnges combined in one commit
+	git status
+		On branch add-readme
+		Your branch and 'origin/add-readme' have diverged,
+		and have 1 and 2 different commits each, respectively.
+	git log --graph --oneline --all -4
+	git push // rejected
+	git push -f // replace old commits with the new one
+	git log --graph --oneline --all -4 // only one commit left
+
+
+
+
+
+	

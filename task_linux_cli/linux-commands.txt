@@ -6,6 +6,7 @@ Fundamentals of file manipulation
 ---------------------------------
 
 ls //list the contents of a directory.
+ls -la
 ls -l // each file will be listed on a separate line in long format
     ls * // '*' matches any number of characters. 
     ls *ing
@@ -92,3 +93,14 @@ kill PID // kill process,  PID is the ID of the process you want to kill.
 kill -9 PID // kill immediately
 
 curl, tcpdump and tshark // These help in monitoring HTTP traffic.
+
+
+diff file1 file2 // show difference between 2 files
+diff -u file1 file2 // clmpares two files, lune by line
+diff -r
+
+patch file_new < file.diff //apply changes
+patch -p1
+
+diff -u file1 file2 > file.diff
+patch < file.diff

@@ -7,7 +7,7 @@ Thanks to all creators and supporters of this community!!!
 
 -   [x] [Git Basics](#git-basics)
 -   [x] [Linux CLI, and HTTP](#linux-cli-and-http)
--   [ ] [Git Collaboration](#git-collaboration)
+-   [x] [Git Collaboration](#git-collaboration)
 -   [ ] [Intro to HTML and CSS](#intro-to-html-and-css)
 -   [ ] [Responsive Web Design](#responsive-web-design)
 -   [ ] [HTML CSS Popup](#html-css-popup)
@@ -31,13 +31,13 @@ I discovered that 'support for password authentication was removed' on August 13
 
 > <details>
 >   <summary>Linux Survival Screenshots</summary>
-> <img src="task_linux_cli/linux-module1.png"
+> <img src="task_linux_cli/linux-module1.png">
 >   <summary></summary>
-> <img src="task_linux_cli/linux-module2.png"
+> <img src="task_linux_cli/linux-module2.png">
 >   <summary></summary>
-> <img src="task_linux_cli/linux-module3.png"
+> <img src="task_linux_cli/linux-module3.png">
 >   <summary></summary>
-> <img src="task_linux_cli/linux-module4.png"
+> <img src="task_linux_cli/linux-module4.png">
 > </details>
 
 
@@ -49,9 +49,18 @@ I discovered that 'support for password authentication was removed' on August 13
 
 > <details>
 >   <summary>LearnGitBranching.js.org Screenshots</summary>
-> <img src="task_git_collaboration/learngitbranching.png"
+> <img src="task_git_collaboration/learngitbranching.png">
+> </details>
+
+> <details>
 >   <summary> Introduction to Git and GitHub Screenshots</summary>
-> <img src="task_git_collaboration/linux-module2.png"
+> <img src="task_git_collaboration/intro-git-github_m1.png">
+>	<summary> </summary>
+> <img src="task_git_collaboration/intro-git-github_m2.png">
+>	<summary> </summary>
+> <img src="task_git_collaboration/intro-git-github_m3.png">
+>	<summary> </summary>
+> <img src="task_git_collaboration/intro-git-github_m4.png">
 > </details>
 
 
