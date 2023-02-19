@@ -65,3 +65,20 @@ I discovered that 'support for password authentication was removed' on August 13
 
 
 1. [The list of more Git commands is here](task_git_collaboration/git-commands.txt)
+
+
+## Intro to HTML and CSS
+
+> <details>
+>   <summary>HTML, CSS, and Javascript for Web Developers - Coursera Screenshots</summary>
+> <img src="task_git_collaboration/html-css-javascript_w1.png">
+> <img src="task_git_collaboration/html-css-javascript_w2.png">
+> </details>
+
+> <details>
+>   <summary>Learn HTML - CodeAcademy.com Screenshots</summary>
+> <img src="task_git_collaboration/code-academy-html.png">
+> </details>
+
+
+1. [Something useful from coursera curses is here](task_html_css_intro/intro-to-html-css.md.md)
