@@ -8,7 +8,7 @@ Thanks to all creators and supporters of this community!!!
 -   [x] [Git Basics](#git-basics)
 -   [x] [Linux CLI, and HTTP](#linux-cli-and-http)
 -   [x] [Git Collaboration](#git-collaboration)
--   [ ] [Intro to HTML and CSS](#intro-to-html-and-css)
+-   [x] [Intro to HTML and CSS](#intro-to-html-and-css)
 -   [ ] [Responsive Web Design](#responsive-web-design)
 -   [ ] [HTML CSS Popup](#html-css-popup)
 -   [ ] [JS Basics](#js-basics)
@@ -71,14 +71,20 @@ I discovered that 'support for password authentication was removed' on August 13
 
 > <details>
 >   <summary>HTML, CSS, and Javascript for Web Developers - Coursera Screenshots</summary>
-> <img src="task_git_collaboration/html-css-javascript_w1.png">
-> <img src="task_git_collaboration/html-css-javascript_w2.png">
+> <img src="task_html_css_intro/html-css-javascript_w1.png">
+> <img src="task_html_css_intro/html-css-javascript_w2.png">
 > </details>
 
 > <details>
 >   <summary>Learn HTML - CodeAcademy.com Screenshots</summary>
-> <img src="task_git_collaboration/code-academy-html.png">
+> <img src="task_html_css_intro/code-academy-html.png">
+> </details>
+
+> <details>
+>   <summary>Learn CSS - CodeAcademy.com Screenshots</summary>
+> <img src="task_html_css_intro/code-academy-css.png">
 > </details>
 
 
-1. [Something useful from coursera curses is here](task_html_css_intro/intro-to-html-css.md.md)
+
+1. [Something useful from coursera curses is here](task_html_css_intro/intro-to-html-css.md)
