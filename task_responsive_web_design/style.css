@@ -1,34 +1,3 @@
-https://www.coursera.org/learn/html-css-javascript-for-web-developers/home/week/1
-
-# Development environment
----
-
-- chrome 
-- git
-- node.js
-- npm
-- browser-sync 
-
-browser-sync start --server --derectory --files "*" // watch for changes in any file 
----
-
-https://www.youtube.com/watch?v=ZYPBTvjZl7M&list=PLM6XATa8CAG4uCli-pMvuvwj46UaQoqIc&index=7
-
-# Sublime shortcuts
-
-темная тема - Preferences > Select Theme
-
-Shift + Alt + W - обернуть выделение тегом
-Alt + Shift + 2 - view layout colomns 2
-
-Ctrl + Shift + P - Package Control
-
-Ctrl + Ё - копирует классы из кода, нужен плагин Tag
-
-
-reset css
-
-```
 /*Обнуление*/
 *{
 	padding: 0;
@@ -68,5 +37,8 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
 
-```
----
+body {}
+
+.grid {}
+.grid__wrapper {}
+.grid__item {}
