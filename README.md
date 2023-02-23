@@ -24,7 +24,9 @@ Thanks to all creators and supporters of this community!!!
 ## Git Basics
 
 I discovered that 'support for password authentication was removed' on August 13, 2021, so I couldn't clone a repository from GitHub. I had to update Git up to the last version. Logged in with the Git Credential Manager
-[The list of Git commands is here](task_git_collaboration/git-commands.txt)
+
+1. [The list of Git commands is here](task_git_collaboration/git-commands.txt)
+2. [Pull Request](https://github.com/kottans/mock-repo/pull/1183)
 
 
 ## Linux CLI, and HTTP
@@ -88,3 +90,28 @@ I discovered that 'support for password authentication was removed' on August 13
 
 
 1. [Something useful from coursera curses is here](task_html_css_intro/intro-to-html-css.md)
+
+
+## Responsive Web Design
+
+> <details>
+>   <summary>FLEXBOX. Вчимося верстати на флексах Screenshots</summary>
+> <img src="task_responsive_web_design/flexbox-youtube.png">
+> </details>
+
+> <details>
+>   <summary>Flexbox Froggy Screenshots</summary>
+> <img src="task_responsive_web_design/flexbox-froggy.png">
+> </details>
+
+> <details>
+>   <summary>CSS Grid Layout Screenshots</summary>
+> <img src="task_responsive_web_design/grid-layout.png">
+> </details>
+
+> <details>
+>   <summary>Grid Garden Screenshots</summary>
+> <img src="task_responsive_web_design/grid-garden.png">
+> </details>
+
+1. [Flexbox and Grid Layout is here](task_responsive_web_design/responsive-web-design.md)
