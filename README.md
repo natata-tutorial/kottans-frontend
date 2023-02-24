@@ -106,7 +106,7 @@ I discovered that 'support for password authentication was removed' on August 13
 
 > <details>
 >   <summary>CSS Grid Layout Screenshots</summary>
-> <img src="task_responsive_web_design/grid-layout.png">
+> <img src="task_responsive_web_design/grid-youtube.png">
 > </details>
 
 > <details>

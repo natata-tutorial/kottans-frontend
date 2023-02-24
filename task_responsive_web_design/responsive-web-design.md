@@ -4,6 +4,8 @@ https://web.dev/i18n/en/responsive-web-design-basics/
 # Flexbox
 ---
 
+https://www.youtube.com/playlist?list=PLM6XATa8CAG5mPV60dMmjMRrHVW4LmV2x
+
 display: flex / inline-flex
 
 justify-content: flex-start(default) / flex-end / flex-center / space-between / space-around 
@@ -39,12 +41,16 @@ flex: flex-grow flex-shrink flex-basis // короткая запись
 flex: 0 1 auto;
 
 flex-direction: row(default), row-reverse, column, column-reverse
+
 ---
 
 https://fls.guru/flexbox.html
 
 # Grid Layout
 ----
+
+https://www.youtube.com/watch?v=GV92IdMGFfA&list=PLM6XATa8CAG5pXQrW_kDaeZb_uIAMNZIm
+
 	<div class="grid">
 		<div class="grid__wrapper">
 			<div class="grid__item"></div>
@@ -121,6 +127,7 @@ align-self: stretch;
 justify-self: stretch;
 
 margin:auto; // по центру ячейки
+
 ---
 
 https://fls.guru/grid.html
