@@ -121,3 +121,18 @@ I discovered that 'support for password authentication was removed' on August 13
  
 [Demo](https://natata-tutorial.github.io/HTML-CSS-Popup/) | [Code Base](https://github.com/natata-tutorial/HTML-CSS-Popup) | [PR](https://github.com/kottans/frontend-2022-homeworks/pull/756)
 
+
+## JS Basics
+
+> <details>
+>   <summary>Вступ до JS - Coursera Screenshots</summary>
+> <img src="task_js_basics/ja-intro.png">
+> </details>
+
+> <details>
+>   <summary>FreeCodeCamp Screenshots</summary>
+> <img src="task_js_basics/freecodecamp-basic-js.png">
+> </details>
+
+1. [JS Basics is here](task_js_basics/js-basics.md)
+
