@@ -133,6 +133,7 @@ I discovered that 'support for password authentication was removed' on August 13
 >   <summary>FreeCodeCamp Screenshots</summary>
 > <img src="task_js_basics/freecodecamp-basic-js.png">
 > <img src="task_js_basics/freecodecamp-es6.png.png">
+> <img src="task_js_basics/freecodecamp-basic-data-structure.png">
 > </details>
 
 1. [JS Basics is here](task_js_basics/js-basics.md)

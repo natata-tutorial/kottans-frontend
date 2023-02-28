@@ -32,6 +32,26 @@ The entries of **arrays are mutable** and can be changed freely, even if the arr
 
 .unshift() - adds the element at the beginning of the array.
 
+.splice() - allows us to do just that: remove any number of consecutive elements from anywhere in an array.
+
+	const numbers = [10, 11, 12, 12, 15]; 
+	const startIndex = 3;
+	const amountToDelete = 1;
+	numbers.splice(startIndex, amountToDelete, 13, 14); // [ 10, 11, 12, 13, 14, 15 ]
+
+.slice() - copies or extracts a given number of elements to a new array
+
+	let todaysWeather = weatherConditions.slice(1, 3);
+
+
+	const tekkenCharacter = {
+	  player: 'Hwoarang',
+	  fightingStyle: 'Tae Kwon Doe',
+	  human: true
+	};	
+	tekkenCharacter.origin = 'South Korea';
+	tekkenCharacter['hair color'] = 'dyed orange';
+
 Equality operator (==) - attempts to convert both values being compared to a common type.
 Strict equality (===) - does not perform a type conversion.
 
@@ -46,6 +66,13 @@ Strict equality (===) - does not perform a type conversion.
 	myObj["NoSpace"] = "Happy Camper";
 	delete myObj.NoSpace;
 	object1.hasOwnProperty('property1')
+	'property1' in object1;
+
+	for (let user in users) {
+	  console.log(user);
+	}
+
+	Object.keys();
 
 ## Recursion
 
@@ -90,6 +117,10 @@ Math.random() // pseudo-random number that's greater than or equal to 0 and less
 	var arr = [6, 89, 3, 45];
 	var maximus = Math.max.apply(null, arr); //ES5
 	const maximus = Math.max(...arr); // ES6
+
+	let thisArray = [true, true, undefined, false, null];
+	let thatArray = [...thisArray]; // use the spread operator to copy an array
+	let thatArray = ['basil', 'cilantro', ...thisArray, 'coriander'];
 
 **Destructuring Assignment**
 ---
@@ -141,3 +172,31 @@ ES6 // With ES6, you can remove the function keyword and colon altogether when d
 	    return `Hello! My name is ${this.name}.`;
 	  }
 	};
+
+# Basic Data Structures
+
+	let simpleArray = ['one', 2, 'three', true, false, undefined, null];
+	console.log(simpleArray.length);
+
+	let complexArray = [
+	  [
+	    {
+	      one: 1,
+	      two: 2
+	    },
+	    {
+	      three: 3,
+	      four: 4
+	    }
+	  ],
+	  [
+	    {
+	      a: "a",
+	      b: "b"
+	    },
+	    {
+	      c: "c",
+	      d: "d"
+	    }
+	  ]
+	];
