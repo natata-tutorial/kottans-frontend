@@ -18,11 +18,29 @@ In JavaScript, **String values are immutable**,
 	myStr[0] = "J"; // will through and error, should assign it with a new value
 	myStr = "Job"; // should assign it with a new value
 
-## Array	
+## Undefine
 
+	console.log(undefine/5); //NaN
+
+Equality operator (==) - attempts to convert both values being compared to a common type.
+Strict equality (===) - does not perform a type conversion.
+
+	if ( false || null || undefine || "" || 0 || NaN ){ // all = false
+		console.log( 'This line won't ever execute' )
+	}
+	Boolean(null); // false
+	Boolean("hello!"); // true
+
+	sideDish = sideDish || "whatever!"; // "whateer!", set default value, || evaluates each side to Boolean and returns first true value
+
+## Array	- collection of data, object
+
+	var array = new Array(); array[0] = "some";
 	const myMusic = ["water", 34, 'a'];
 
 The entries of **arrays are mutable** and can be changed freely, even if the array was declared with **const**
+
+.length - length of the array
 
 .push() - takes one or more parameters and "pushes" them onto the end of the array.
 
@@ -52,12 +70,14 @@ The entries of **arrays are mutable** and can be changed freely, even if the arr
 	tekkenCharacter.origin = 'South Korea';
 	tekkenCharacter['hair color'] = 'dyed orange';
 
-Equality operator (==) - attempts to convert both values being compared to a common type.
-Strict equality (===) - does not perform a type conversion.
+
 
 ## Objects
 
-	const myObj = {
+	var company = new Object();
+	company.name = "Facebook";
+
+	const myObj = {  // object literal
 	  "Space Name": "Kirk",
 	  "More Space": "Spock",
 	  "NoSpace": "USS Enterprise"
@@ -200,3 +220,94 @@ ES6 // With ES6, you can remove the function keyword and colon altogether when d
 	    }
 	  ]
 	];
+
+# Function
+
+Functions ARE objects
+
+	function multiply(x, y) {
+		return x*y;
+	};
+	multiply.version = "v.1.0.0";
+
+
+	// Function factory
+	function makeMultiplier(multiplier) {
+		var myFunc = function (x){
+			return multiplier * x;
+		};
+		return myFunc;
+	};
+	var multiplyBy3 = makeMultiplier(3);
+	console.log(multiplyBy3(10)); // 30
+	var doubleAll = makeMultiplier(2);
+	console.log(doubleAll(100)); // 200
+
+	// Passing function as argument
+	function doOperationOn(x, operation) {
+		return operation(x);
+	}
+	var result = doOperationOn(5, multipluBy3);
+	console.log(result); // 15
+	result = doOperationOn(100, doubleAll);
+	consolt.log(result); // 200
+
+## Passing/copying by value vs by reference
+
+Primitives - by value // Number, Boolean, Null, Undefined, String, 
+Objects - by reference 
+
+## Function constructors
+
+	function Circle (radius){  // doesn't return anything
+		this.radius = radius;
+		this.getArea =  // shouldn't do like this, it creates new function each time new object Circle is created
+			function (){
+				return Math.PI * Math. pow(this.radius, 2);
+			};
+	};
+	var myCircle = new Cercle(10); // == new Object
+	console.log(myCircle.getArea());
+
+	Circle.prototype.getArea = // exist in any new object created with new Circle
+	function() {
+		return Math.PI * Math. pow(this.radius, 2);
+	}
+
+## Object Literals and "this"
+
+var literalCircle = { // new Object()
+	radius: 10,
+
+	getArea: function() {
+		var self = this;
+		console.log(this); 
+		var increaseRadius = function(){
+			this.radius = 20; // bug,this point to the global object, fixed in ES6
+			self.radius = 20; // bugfix, this points to the current object 
+		};
+		increaseRadius();
+		console.log(this.radius); // 10
+		return Math.PI * Math. pow(this.radius, 2);
+	}
+};
+literalCircle.getArea();
+
+ # Closures
+
+	 function makeMultiplier(multiplier){
+	 	return (
+	 		function(x){
+	 			return multiplier *x;
+	 		}
+	 	);
+	 };
+	 var dounleAll = makeMultiplier(2)
+	 console.log(doubleAll(10));
+
+
+# Immideately Invoked Function Expression
+
+	(function (){
+		console.log("Hi!");
+	})();

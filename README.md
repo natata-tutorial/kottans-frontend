@@ -126,7 +126,7 @@ I discovered that 'support for password authentication was removed' on August 13
 
 > <details>
 >   <summary>Вступ до JS - Coursera Screenshots</summary>
-> <img src="task_js_basics/ja-intro.png">
+> <img src="task_js_basics/intro-to-js.png">
 > </details>
 
 > <details>
