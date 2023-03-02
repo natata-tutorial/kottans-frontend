@@ -70,7 +70,73 @@ The entries of **arrays are mutable** and can be changed freely, even if the arr
 	tekkenCharacter.origin = 'South Korea';
 	tekkenCharacter['hair color'] = 'dyed orange';
 
+Array.prototype.map() -  iterates over each item in an array and returns a new array containing the results of calling the callback function on each element. It does this without mutating the original array.
 
+	// const ratings = [];
+	// for (let i = 0; i < watchList.length; i++) {
+	//   ratings.push({title: watchList[i]["Title"], rating: watchList[i]["imdbRating"]});
+	// }
+	const ratings = watchList.map(video => ({ "title": video["Title"], "rating": video["imdbRating"]});
+
+Array.prototype.forEach() - executes a provided function once for each array element
+
+	array1.forEach(element => console.log(element));
+
+Array.prototype.filter() - calls a function on each element of an array and returns a new array containing only the elements for which that function returns a truthy value
+
+.concat() - For arrays, the method is called on one, then another array is provided as the argument to concat, which is added to the end of the first array.
+
+	[1, 2, 3].concat([4, 5, 6]); // [1, 2, 3, 4, 5, 6].
+
+Array.prototype.reduce() -  iterates over each item in an array and returns a single value (i.e. string, number, object, array). 
+
+	const users = [
+	  { name: 'John', age: 34 },
+	  { name: 'Amy', age: 20 },
+	  { name: 'camperCat', age: 10 }
+	];
+
+	const sumOfAges = users.reduce((sum, user) => sum + user.age, 0); //64
+	const usersObj = users.reduce((obj, user) => {
+	  obj[user.name] = user.age;
+	  return obj;
+	}, {}); // { John: 34, Amy: 20, camperCat: 10 }
+
+	const sumWithInitial = array1.reduce(
+	  (accumulator, currentValue) => accumulator + currentValue,
+	  initialValue
+	);
+
+.sort() -  method sorts the elements of an array according to the callback function.
+ If compareFunction(a,b) returns a value less than 0 for two elements a and b, then a will come before b. If compareFunction(a,b) returns a value greater than 0 for two elements a and b, then b will come before a. If compareFunction(a,b) returns a value equal to 0 for two elements a and b, then a and b will remain unchanged.
+
+	function ascendingOrder(arr) {
+	  return arr.sort(function(a, b) {
+	    return a - b;
+	  });
+	}
+
+	ascendingOrder([1, 5, 2, 3, 4]); // [1, 2, 3, 4, 5].
+
+.split() - splits a string into an array of strings. 
+
+	str.split(/[ ,.-]+/); // separates str by ' ' or ',' '.' '-' symbol 
+
+.join() - method is used to join the elements of an array together to create a string. It takes an argument for the delimiter that is used to separate the array elements in the string.
+
+	str.join(' ');
+
+.every() - method works with arrays to check if every element passes a particular test. It returns a Boolean value - true if all values meet the criteria, false if not.
+
+	[1, 5, 8, 0, 10, 11].every(function(currentValue) {
+	  return currentValue < 10;
+	}); // false
+
+.some() - works with arrays to check if any element passes a particular test. It returns a Boolean value - true if any of the values meet the criteria, false if not.
+
+[10, 50, 8, 220, 110, 11].some(function(currentValue) {
+  return currentValue < 10;
+}); // true
 
 ## Objects
 
@@ -311,3 +377,37 @@ literalCircle.getArea();
 	(function (){
 		console.log("Hi!");
 	})();
+
+
+# Currying and Partial Application
+
+**Currying** a function means to convert a function of N arity into N functions of arity 1.
+
+	function unCurried(x, y) {
+	  return x + y;
+	}
+
+	function curried(x) {
+	  return function(y) {
+	    return x + y;
+	  }
+	}
+
+	const curried = x => y => x + y
+
+	curried(1)(2)
+	curried(1)(2) would return 3.
+
+	const funcForY = curried(1);
+	console.log(funcForY(2)); // 3
+
+
+**Partial application** can be described as applying a few arguments to a function at a time and returning another function that is applied to more arguments. 
+
+
+	function impartial(x, y, z) {
+	  return x + y + z;
+	}
+
+	const partialFn = impartial.bind(this, 1, 2);
+	partialFn(10); // 13
