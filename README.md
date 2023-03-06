@@ -114,7 +114,7 @@ I discovered that 'support for password authentication was removed' on August 13
 > <img src="task_responsive_web_design/grid-garden.png">
 > </details>
 
-1. [Flexbox and Grid Layout is here](task_responsive_web_design/responsive-web-design.md)
+1. [Flexbox and Grid Layout are here](task_responsive_web_design/responsive-web-design.md)
 
 
 ## HTML CSS Popup
@@ -139,5 +139,16 @@ I discovered that 'support for password authentication was removed' on August 13
 > <img src="task_js_basics/freecodecamp-intermediate-algorinm-scripting.png">
 > </details>
 
-1. [JS Basics is here](task_js_basics/js-basics.md)
+1. [JS Basics are here](task_js_basics/js-basics.md)
 
+## DOM
+
+> <details>
+>   <summary>Document Object Model Manipulation - Coursera Screenshots</summary>
+> <img src="task_js_dom/dom-manipulation.png">
+> </details>
+
+> <details>
+>   <summary>FreeCodeCamp Algorithm Scripting Challenges Screenshots</summary>
+> <img src="task_js_dom/freecodecamp-basic-js.png">
+> </details>
