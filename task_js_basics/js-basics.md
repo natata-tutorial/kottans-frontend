@@ -138,6 +138,10 @@ Array.prototype.reduce() -  iterates over each item in an array and returns a si
   return currentValue < 10;
 }); // true
 
+	function destroyer(arr, ...valsToRemove) {
+	  return arr.filter(elem => !valsToRemove.includes(elem));
+	}
+
 ## Objects
 
 	var company = new Object();
