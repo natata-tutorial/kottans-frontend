@@ -1,7 +1,7 @@
 # JS Basics
 ---
 
-[Intermediate Algorithm Scripting](task_js_basics/script.js)
+[Intermediate Algorithm Scripting](script.js)
 
 **var** keyword - you can easily overwrite variable declarations, use **let** with ES6
 **const** - cannot be reassigned, name in uppercase, only prevents reassignment of the variable identifier
