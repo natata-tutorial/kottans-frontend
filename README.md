@@ -11,7 +11,7 @@ Thanks to all creators and supporters of this community!!!
 -   [x] [Intro to HTML and CSS](#intro-to-html-and-css)
 -   [x] [Responsive Web Design](#responsive-web-design)
 -   [x] [HTML CSS Popup](#html-css-popup)
--   [ ] [JS Basics](#js-basics)
+-   [x] [JS Basics](#js-basics)
 -   [ ] [DOM](#dom)
 -   [ ] [Tiny JS World](#tiny-js-world)
 -   [ ] [Object Oriented JS](#object-oriented-js)
