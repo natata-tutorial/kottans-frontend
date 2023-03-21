@@ -116,10 +116,14 @@ I discovered that 'support for password authentication was removed' on August 13
 
 1. [Flexbox and Grid Layout are here](task_responsive_web_design/responsive-web-design.md)
 
+[Useful Links](task_responsive_web_design/useful-links.md)
+
 
 ## HTML CSS Popup
  
 [Demo](https://natata-tutorial.github.io/HTML-CSS-Popup/) | [Code Base](https://github.com/natata-tutorial/HTML-CSS-Popup) | [PR](https://github.com/kottans/frontend-2022-homeworks/pull/756)
+
+
 
 
 ## JS Basics
@@ -140,6 +144,7 @@ I discovered that 'support for password authentication was removed' on August 13
 > </details>
 
 1. [JS Basics are here](task_js_basics/js-basics.md)
+2. [Useful Links](task_js_basics/useful-links.md)
 
 ## DOM
 
@@ -149,6 +154,11 @@ I discovered that 'support for password authentication was removed' on August 13
 > </details>
 
 > <details>
->   <summary>FreeCodeCamp Algorithm Scripting Challenges Screenshots</summary>
-> <img src="task_js_dom/freecodecamp-basic-js.png">
+>   <summary>[DOM - FreeCodeCamp Algorithm Scripting Challenges 12-18 Screenshots](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#intermediate-algorithm-scripting)</summary>
+> <img src="task_js_dom/freecodecamp-intermediate-algoritm-scripting-18.png">
 > </details>
+[script.js](task_js_dom/script.js)
+
+
+
+

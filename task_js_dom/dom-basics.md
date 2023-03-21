@@ -1,5 +1,7 @@
 # Document Object
 
+[Intermediate Algorithm Scripting](script.js)
+
 	document.getElementById("Id").value;
 	document.getElementById("content").textContent = message;
 	document.getElementById("content").innerHTML = "<h2>"+message+"</h2>";
