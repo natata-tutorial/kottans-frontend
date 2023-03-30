@@ -1,7 +1,5 @@
 # Document Object
 
-[Intermediate Algorithm Scripting](script.js)
-
 	document.getElementById("Id").value;
 	document.getElementById("content").textContent = message;
 	document.getElementById("content").innerHTML = "<h2>"+message+"</h2>";
@@ -22,3 +20,8 @@ Unobstrusive event binding
 
 	document.addEventListener("DOMContentLoaded", function(event){
 	}) // fires before images or css loaded
+
+
+	---
+
+console.dir()  // the way to see all the properties of a specified JavaScript object in console

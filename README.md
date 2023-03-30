@@ -12,7 +12,7 @@ Thanks to all creators and supporters of this community!!!
 -   [x] [Responsive Web Design](#responsive-web-design)
 -   [x] [HTML CSS Popup](#html-css-popup)
 -   [x] [JS Basics](#js-basics)
--   [ ] [DOM](#dom)
+-   [x] [DOM](#dom)
 -   [ ] [Tiny JS World](#tiny-js-world)
 -   [ ] [Object Oriented JS](#object-oriented-js)
 -   [ ] [OOP Exercise](#oop-exercise)
@@ -154,11 +154,15 @@ I discovered that 'support for password authentication was removed' on August 13
 > </details>
 
 > <details>
->   <summary>[DOM - FreeCodeCamp Algorithm Scripting Challenges 12-18 Screenshots](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#intermediate-algorithm-scripting)</summary>
+>   <summary>DOM - FreeCodeCamp Algorithm Scripting Challenges 12-18 Screenshots</summary>
 > <img src="task_js_dom/freecodecamp-intermediate-algoritm-scripting-18.png">
 > </details>
+
+[Demo](https://natata-tutorial.github.io/kottans-DOM/) | [Code Base](https://github.com/natata-tutorial/kottans-DOM) | [PR](https://github.com/kottans/frontend-2022-homeworks/pull/757)
+
 [script.js](task_js_dom/script.js)
 
+[FreeCodeCamp Algorithm Scripting Challenges 12-18 ](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#intermediate-algorithm-scripting)
 
 
 
