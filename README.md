@@ -164,5 +164,10 @@ I discovered that 'support for password authentication was removed' on August 13
 
 [FreeCodeCamp Algorithm Scripting Challenges 12-18 ](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#intermediate-algorithm-scripting)
 
+## Tiny JS World
+
+[Demo](https://natata-tutorial.github.io/a-tiny-JS-world/) | [Code Base](https://github.com/natata-tutorial/a-tiny-JS-world/) | [PR](https://github.com/kottans/frontend-2022-homeworks/pull/758)
+
+
 
 
