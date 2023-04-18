@@ -1,25 +1,25 @@
 # kottans-frontend
 
-Hi! I'm Natata, and I'm going to accomplish this self-studying course. 
+Hi! I'm Natata, and I'm going to accomplish this self-studying course.
 Thanks to all creators and supporters of this community!!!
 
 ## Tasks
 
--   [x] [Git Basics](#git-basics)
--   [x] [Linux CLI, and HTTP](#linux-cli-and-http)
--   [x] [Git Collaboration](#git-collaboration)
--   [x] [Intro to HTML and CSS](#intro-to-html-and-css)
--   [x] [Responsive Web Design](#responsive-web-design)
--   [x] [HTML CSS Popup](#html-css-popup)
--   [x] [JS Basics](#js-basics)
--   [x] [DOM](#dom)
--   [ ] [Tiny JS World](#tiny-js-world)
--   [ ] [Object Oriented JS](#object-oriented-js)
--   [ ] [OOP Exercise](#oop-exercise)
--   [ ] [Offline Web Applications](#offline-web-applications)
--   [ ] [Memory Pair Game](#memory-pair-game)
--   [ ] [Website Performance Optimization](#website-performance-optimization)
--   [ ] [Friends App](#friends-app)
+- [x] [Git Basics](#git-basics)
+- [x] [Linux CLI, and HTTP](#linux-cli-and-http)
+- [x] [Git Collaboration](#git-collaboration)
+- [x] [Intro to HTML and CSS](#intro-to-html-and-css)
+- [x] [Responsive Web Design](#responsive-web-design)
+- [x] [HTML CSS Popup](#html-css-popup)
+- [x] [JS Basics](#js-basics)
+- [x] [DOM](#dom)
+- [ ] [Tiny JS World](#tiny-js-world)
+- [ ] [Object Oriented JS](#object-oriented-js)
+- [ ] [OOP Exercise](#oop-exercise)
+- [ ] [Offline Web Applications](#offline-web-applications)
+- [ ] [Memory Pair Game](#memory-pair-game)
+- [ ] [Website Performance Optimization](#website-performance-optimization)
+- [ ] [Friends App](#friends-app)
 
 ## Git Basics
 
@@ -27,7 +27,6 @@ I discovered that 'support for password authentication was removed' on August 13
 
 1. [The list of Git commands is here](task_git_collaboration/git-commands.txt)
 2. [Pull Request](https://github.com/kottans/mock-repo/pull/1183)
-
 
 ## Linux CLI, and HTTP
 
@@ -42,10 +41,8 @@ I discovered that 'support for password authentication was removed' on August 13
 > <img src="task_linux_cli/linux-module4.png">
 > </details>
 
-
 1. [The list of Linux commands is here](task_linux_cli/linux-commands.txt)
 2. [The basics of HTTP protocol is here](task_linux_cli/http-protocol.txt)
-
 
 ## Git Collaboration
 
@@ -57,17 +54,15 @@ I discovered that 'support for password authentication was removed' on August 13
 > <details>
 >   <summary> Introduction to Git and GitHub Screenshots</summary>
 > <img src="task_git_collaboration/intro-git-github_m1.png">
->	<summary> </summary>
+> 	<summary> </summary>
 > <img src="task_git_collaboration/intro-git-github_m2.png">
->	<summary> </summary>
+> 	<summary> </summary>
 > <img src="task_git_collaboration/intro-git-github_m3.png">
->	<summary> </summary>
+> 	<summary> </summary>
 > <img src="task_git_collaboration/intro-git-github_m4.png">
 > </details>
 
-
 1. [The list of more Git commands is here](task_git_collaboration/git-commands.txt)
-
 
 ## Intro to HTML and CSS
 
@@ -87,10 +82,7 @@ I discovered that 'support for password authentication was removed' on August 13
 > <img src="task_html_css_intro/code-academy-css.png">
 > </details>
 
-
-
 1. [Something useful from coursera curses is here](task_html_css_intro/intro-to-html-css.md)
-
 
 ## Responsive Web Design
 
@@ -118,13 +110,9 @@ I discovered that 'support for password authentication was removed' on August 13
 
 [Useful Links](task_responsive_web_design/useful-links.md)
 
-
 ## HTML CSS Popup
- 
+
 [Demo](https://natata-tutorial.github.io/HTML-CSS-Popup/) | [Code Base](https://github.com/natata-tutorial/HTML-CSS-Popup) | [PR](https://github.com/kottans/frontend-2022-homeworks/pull/756)
-
-
-
 
 ## JS Basics
 
@@ -168,6 +156,12 @@ I discovered that 'support for password authentication was removed' on August 13
 
 [Demo](https://natata-tutorial.github.io/a-tiny-JS-world/) | [Code Base](https://github.com/natata-tutorial/a-tiny-JS-world/) | [PR](https://github.com/kottans/frontend-2022-homeworks/pull/758)
 
+## Object Oriented JS
 
+> <details>
+>   <summary>Сodewars - Kottans 7kyu Screenshots</summary>
+> [Codewars Badges](https://www.codewars.com/users/natata-tutorial/badges/large)
+> <img src="task_js_oop/codewars-kottans-ss.png">
+> </details>
 
-
+[OOP Basics are here](task_js_oop/oop-basics.md)
